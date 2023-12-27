@@ -12,7 +12,7 @@ function App() {
   const [allTime, setAllTime] = useState([]);
   // fe19bf63247e4170bbcb8d4ae6e3b4ab
 
-  // Fetching trending news
+  // Fetching trending news from bbc news
   useEffect(() => {
     const fetchNews = async () => {
       try {
@@ -34,7 +34,7 @@ function App() {
     fetchNews();
   }, []);
 
-  //Fetching top news
+  //Fetching top news from cnn
   useEffect(() => {
     const fetchNews = async () => {
       try {
@@ -56,7 +56,7 @@ function App() {
     fetchNews();
   }, []);
 
-  // Fetching all time news
+  // Fetching all time news from us depending on country top news
   useEffect(() => {
     const fetchNews = async () => {
       try {
