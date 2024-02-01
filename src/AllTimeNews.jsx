@@ -4,7 +4,7 @@ const AllTimeNews = ({ news }) => {
   return (
     <div className="flex flex-wrap gap-4 mt-10">
       <div className="w-full sm:w-1/1 md:w-1/1 lg:w-3/12 xl:w-3/12">
-        <img src={news.urlToImage} alt="" />
+        <img src={news.urlToImage} alt="" className="rounded-sm" />
       </div>
 
       <div className="w-full sm:w-1/1 md:w-1/1 lg:w-8/12 xl:w-8/12 text-gray-100">

@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Navbar";
 import NewsList from "./NewsList";
-import TopNewsList from "./TopNewsList";
+import TechNewsList from "./TechNewsList";
 import AllTimeList from "./AllTimeList";
 
 function App() {
@@ -34,14 +34,14 @@ function App() {
     fetchNews();
   }, []);
 
-  //Fetching top news from cnn
+  //Fetching tech news from cnn
   useEffect(() => {
     const fetchNews = async () => {
       try {
         const apiKey = "fe19bf63247e4170bbcb8d4ae6e3b4ab";
         const apiUrl =
           "https://newsapi.org/v2/top-headlines?" +
-          "sources=cnn&" +
+          "sources=techcrunch&" +
           "apiKey=" +
           apiKey;
 
@@ -83,7 +83,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<NewsList data={data} />} />
-        <Route path="/top-news" element={<TopNewsList data={top} />} />
+        <Route path="/top-news" element={<TechNewsList data={top} />} />
         <Route path="/all-time" element={<AllTimeList data={allTime} />} />
       </Routes>
     </div>

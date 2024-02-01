@@ -25,7 +25,7 @@ const Navbar = () => {
                 to="/top-news"
                 className="block py-2 px-3 text-gray-100 rounded hover:text-red-500"
               >
-                Top news
+                Tech News
               </Link>
               <Link
                 to="/all-time"
